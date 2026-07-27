@@ -1517,7 +1517,7 @@ async function main() {
     }
   }
 
-  const determinismFixture = selectedFixtures.find((fixture) => fixture.name === 'one-painting') ?? selectedFixtures[0];
+  const determinismFixture = fixtures.find((fixture) => fixture.name === 'one-painting') ?? selectedFixtures[0];
   if (determinismFixture) {
     globalChecks.push(runCheck('determinism', failures, () => validateDeterminism(determinismFixture, failures)));
   }
