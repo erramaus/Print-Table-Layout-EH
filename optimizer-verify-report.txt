@@ -1,0 +1,21 @@
+RUN fixture one-painting
+RUN fixture identical-size
+RUN fixture mixed-large-small
+RUN fixture around-required-sample
+RUN fixture known-one-table
+RUN fixture known-multi-table
+RUN fixture depth-aware-right-fence
+RUN fixture extra-sample-possible
+RUN fixture extra-sample-none-expected
+RUN fixture floating-regression-case
+RUN fixture unnecessary-second-table-regression
+RUN fixture spacing-boundary-close
+PASS spacing
+PASS bounds
+PASS orientation
+PASS determinism
+PASS table count
+PASS gap analysis
+PASS extra samples
+PASS print travel
+Optimizer verification: 8 passed, 0 failed

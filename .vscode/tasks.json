@@ -1,0 +1,2634 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "verify-optimizer",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report3",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report4",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-2.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report5",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-3.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-verify-processes",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*verify-optimizer.ts*' -or $_.CommandLine -like '*npm run verify:optimizer*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }; Write-Output 'killed'"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-node",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"taskkill",
+				"/F",
+				"/IM",
+				"node.exe"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-report6",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-4.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-direct",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-sample-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-after-sample-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-final.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-verifier-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-after-verifier-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-final-2.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-build-readiness-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-verify-readiness-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-readiness-artifacts",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-verify-sequential",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-after-determinism-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-to-report",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-readiness.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-final-fixes",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-after-final-fixes",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-final-production-ready",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-final-production-ready",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-env-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-after-env-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "readiness-runtime-and-fixtures",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "readiness-fixture-runtime-incremental",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "readiness-fixtures-fastperf",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "readiness-perf-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-now",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-extra-sample-visibility",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-extra-sample-visibility",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-print-travel",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-print-travel",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-print-travel-report",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-travel.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-print-travel-final-check",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-print-travel-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-print-travel-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-print-travel-deterministic",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-print-travel-deterministic",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-travel-final-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-travel-final-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-front-row-depth",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-front-row-depth",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-pdf-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-pdf-fix-retry",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-pdf-fix-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-one-page-pdf",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-one-page-pdf",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-pdf-single-page",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/verify-pdf-single-page.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-one-page-pdf-insert-page",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-pdf-single-page-insert-page",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/verify-pdf-single-page.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-after-one-page",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-verify-pdf-single-page-script",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:pdf:single-page"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-verify-all",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:all"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-depth-aware-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-depth-aware-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-capture-log",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"verify-optimizer-latest.log",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-all-depth-aware-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:all"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "inspect-depth-fixture-layout",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"-e",
+				"import { generateLayout } from './src/optimizer/layoutEngine.ts'; const order=[{id:'a',referenceNumber:'#01',name:'A',width:40,height:48,orientation:'VERT',color:'#336699'},{id:'b',referenceNumber:'#02',name:'B',width:28,height:56,orientation:'VERT',color:'#336699'},{id:'c',referenceNumber:'#03',name:'C',width:28,height:47,orientation:'VERT',color:'#336699'}]; const layout=generateLayout(order); console.log(JSON.stringify(layout.tables.map(t=>({table:t.tableNumber,paintings:t.paintings.map(p=>({ref:p.referenceNumber,w:p.width,h:p.height,x:p.x,y:p.y,s:p.sampleType}))})),null,2));"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-inspect-depth-fixture",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/inspect-depth-fixture.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-inspect-depth-fixture-after-swap-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/inspect-depth-fixture.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-depth-aware-fix-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-depth-aware-fix-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "inspect-depth-fixture-deterministic",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set",
+				"OPTIMIZER_DETERMINISTIC=1&&",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"-e",
+				"import { generateLayout } from './src/optimizer/layoutEngine.ts'; const order=[{id:'a',referenceNumber:'#01',name:'A',width:40,height:48,orientation:'VERT',color:'#336699'},{id:'b',referenceNumber:'#02',name:'B',width:28,height:56,orientation:'VERT',color:'#336699'},{id:'c',referenceNumber:'#03',name:'C',width:28,height:47,orientation:'VERT',color:'#336699'}]; const layout=generateLayout(order); console.log(JSON.stringify(layout.tables[0].paintings.filter(p=>!p.sampleType).map(p=>({ref:p.referenceNumber,x:p.x,y:p.y,w:p.width,h:p.height})),null,2));"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "inspect-depth-fixture-deterministic-file",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set OPTIMIZER_DETERMINISTIC=1&& node ./node_modules/tsx/dist/cli.mjs scripts/inspect-depth-fixture.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-depth-aware-after-fix2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-pdf-orientation-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-pdf-orientation-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-pdf-single-page-after-orientation-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:pdf:single-page"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-coordinate-label-change",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-pdf-output-test-sample",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:pdf:single-page"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-coordinate-header-spacing-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-final-pdf-coordinate-polish",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-muted-colors",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-global-muting",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-snapping-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-snapping-report",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				">",
+				"optimizer-verify-report-snap.txt",
+				"2>&1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-direct-snap-unique",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set",
+				"OPTIMIZER_DETERMINISTIC=1&&",
+				"node",
+				"--expose-gc",
+				"--max-old-space-size=4096",
+				".\\node_modules\\tsx\\dist\\cli.mjs",
+				"scripts\\verify-optimizer.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-rerun",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-one-fixture",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet",
+				"--fixture",
+				"one-painting"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-full",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-full-clean",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-full-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-fixture-identical-size",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-fixture-identical-size-rerun",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-fixture-identical-size-after-guard",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-fixture-identical-size-budgeted",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-full-budgeted",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-verifier-output-refactor",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-identical-size",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "inspect-identical-snap-candidates",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"-e",
+				"const {generateLayout,isPlacementValid,snapToNearest5Mm}=await import('./src/optimizer/layoutEngine.ts'); const MM_PER_INCH=25.4; const order=[{id:'a',referenceNumber:'#01',name:'P1',width:24,height:18,orientation:'VERT',color:'#336699'},{id:'b',referenceNumber:'#02',name:'P2',width:24,height:18,orientation:'VERT',color:'#336699'},{id:'c',referenceNumber:'#03',name:'P3',width:24,height:18,orientation:'VERT',color:'#336699'}]; const layout=generateLayout(order); const table=layout.tables[0]; const p=table.paintings.find(x=>x.referenceNumber==='#02'); const others=table.paintings.filter(x=>x.id!==p.id); const base=snapToNearest5Mm(p.x); const step=5/MM_PER_INCH; const cands=[base,base-step,base+step,base-step*2,base+step*2]; console.log('p',p.referenceNumber,'xmm',p.x*MM_PER_INCH,'ymm',p.y*MM_PER_INCH); for(const x of cands){console.log('cand',x*MM_PER_INCH,'valid',isPlacementValid({x,y:p.y},p.width,p.height,others));}"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-debug-snap",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-snap.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-identical-size-rerun2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-depth-aware-right-fence",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-extra-sample-possible",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"extra-sample-possible"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-spacing-boundary-close",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"spacing-boundary-close"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-failed-fixture-depth-aware-right-fence-rerun",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-final-pass",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "build-after-snap-fixes",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-optimizer-quiet-final-clean",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-build",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-verify-optimizer",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-verify-optimizer-rerun",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-around-required-sample",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"around-required-sample"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "debug-around-diff",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-around-diff.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "debug-around-diff-deterministic",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set",
+				"OPTIMIZER_DETERMINISTIC=1&&",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-around-diff.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "debug-around-diff-deterministic-ps",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$env:OPTIMIZER_DETERMINISTIC='1'; node ./node_modules/tsx/dist/cli.mjs scripts/debug-around-diff.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-verify-clean",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-verify-pdf-single-page",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:pdf:single-page"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-node-procs",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id, StartTime, CPU | Format-Table -AutoSize"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "prod-readiness-verify-quiet-clean",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-node-procs-2",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id, CPU | Format-Table -AutoSize"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-report-timestamp",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Item optimizer-verification-report.txt | Select-Object LastWriteTime, Length | Format-List"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-readiness-runtime-sweep",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-readiness-report-exists",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Item artifacts/optimizer-readiness/readiness-report.json -ErrorAction SilentlyContinue | Select-Object LastWriteTime, Length | Format-List"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-node-procs-3",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id, StartTime, CPU | Sort-Object StartTime | Format-Table -AutoSize"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-readiness-runtime-sweep-clean",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"readiness:optimizer"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-runtime-progress",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Item artifacts/optimizer-readiness/runtime-progress.json -ErrorAction SilentlyContinue | Select-Object LastWriteTime, Length | Format-List"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-node-procs-4",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id, CPU, StartTime | Format-Table -AutoSize"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "runtime-sweep-10-25-50-100",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$env:OPTIMIZER_DETERMINISTIC='1'; node ./node_modules/tsx/dist/cli.mjs scripts/runtime-sweep.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "runtime-sweep-compact",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$env:OPTIMIZER_DETERMINISTIC='1'; node ./node_modules/tsx/dist/cli.mjs -e \"import { generateLayout } from './src/optimizer/layoutEngine.ts'; const seededRandom=(seed)=>{let state=seed>>>0; return ()=>{state=(1664525*state+1013904223)>>>0; return state/0x100000000;};}; const makeOrder=(count,seed)=>{const rand=seededRandom(seed); const out=[]; for(let i=0;i<count;i++){const width=24+Math.floor(rand()*26); const height=16+Math.floor(rand()*24); const orientation=rand()>0.5?'VERT':'HORI'; out.push({id:'runtime-'+count+'-'+(i+1),referenceNumber:'#'+String(i+1).padStart(3,'0'),name:'Runtime '+(i+1),width,height,orientation,color:'#64748b'});} return out;}; for (const count of [10,25,50,100]) { const t0=Date.now(); const layout=generateLayout(makeOrder(count,count*101+17)); const elapsed=Date.now()-t0; console.log('RUNTIME count='+count+' elapsedMs='+elapsed+' tables='+layout.tables.length); }\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "runtime-sweep-small",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/runtime-sweep-small.ts"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-prod-verify-quiet",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-final-report-meta",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Item optimizer-verification-report.txt | Select-Object LastWriteTime, Length | Format-List"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-final-verify-procs",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id, StartTime, CPU | Sort-Object StartTime | Format-Table -AutoSize"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "final-cleanup-build",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"build"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "readiness-verify-quiet-fresh",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "dev-server",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "verify-optimizer-fresh-full-suite",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-fresh-full-suite-180s",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-around-required-sample-after-snap-change",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"around-required-sample"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-spacing-boundary-close-fence-only",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"spacing-boundary-close"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-spacing-boundary-close-fence-only-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"spacing-boundary-close"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-after-fence-only",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-fence-only",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-fence-only",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-after-fence-axis-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-around-required-sample-fence-axis-fix",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"around-required-sample"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-final-fence-axis",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-fresh",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-fresh-rerun",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-authoritative",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-with-fence-diag",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set",
+				"OPTIMIZER_FENCE_SNAP_DIAGNOSTICS=1&&",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-with-fence-diag",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"set",
+				"OPTIMIZER_FENCE_SNAP_DIAGNOSTICS=1&&",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-with-fence-diag-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"\"set OPTIMIZER_FENCE_SNAP_DIAGNOSTICS=1&& npm run verify:optimizer -- --fixture mixed-large-small\""
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-with-fence-diag-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"\"set OPTIMIZER_FENCE_SNAP_DIAGNOSTICS=1&& npm run verify:optimizer -- --fixture depth-aware-right-fence\""
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "debug-fence-snap",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-fence-snap.ts"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "debug-fence-snap-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-fence-snap.ts"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-after-convergence",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-after-convergence",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "debug-fence-combo",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"node",
+				"./node_modules/tsx/dist/cli.mjs",
+				"scripts/debug-fence-combo.ts"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-after-group-refine",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-after-group-refine",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-fence-spacing-rule",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-fence-spacing-rule",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-around-required-sample-fence-spacing-rule",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"around-required-sample"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-mixed-large-small-fence-spacing-rule-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"mixed-large-small"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-depth-aware-right-fence-fence-spacing-rule-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"depth-aware-right-fence"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-around-required-sample-fence-spacing-rule-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"around-required-sample"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-fence-spacing-final",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "check-node-processes",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"tasklist",
+				"/FI",
+				"IMAGENAME eq node.exe"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "check-report-state",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"powershell",
+				"-NoProfile",
+				"-Command",
+				"Get-Item optimizer-verification-report.txt, optimizer-verification-report.json | Select-Object Name, LastWriteTime, Length | Format-Table -AutoSize"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-fence-spacing-final-2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--quiet"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "inspect-verifier-artifacts-after-run",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"powershell",
+				"-NoProfile",
+				"-Command",
+				"Get-Item optimizer-verification-report.txt, optimizer-verification-report.json | Select-Object Name, LastWriteTime, Length | Format-List"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "check-node-processes-after-pass1",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"tasklist",
+				"/FI",
+				"IMAGENAME eq node.exe"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-identical-size-isolation",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer",
+				"--",
+				"--fixture",
+				"identical-size"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "inspect-report-after-identical-size",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"powershell",
+				"-NoProfile",
+				"-Command",
+				"Get-Item optimizer-verification-report.txt, optimizer-verification-report.json | Select-Object Name, Length, LastWriteTime | Format-List"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-authoritative",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-full-suite-authoritative-nonquiet-v2",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm",
+				"run",
+				"verify:optimizer"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-once",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"verify:optimizer"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-once-cmd",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"verify:optimizer"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-optimizer-cmd-direct-once",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-with-exit-once",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer & echo VERIFY_EXIT=%ERRORLEVEL%"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "build-with-exit-once",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run build & echo BUILD_EXIT=%ERRORLEVEL%"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-to-report-and-exitfile",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer > optimizer-verification-report.txt 2>&1 & echo VERIFY_EXIT=%ERRORLEVEL%> optimizer-verification-exit.txt"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "build-to-exitfile",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run build > build-output.txt 2>&1 & echo BUILD_EXIT=%ERRORLEVEL%> build-exit.txt"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-to-report-and-exitfile-von",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/v:on",
+				"/c",
+				"npm run verify:optimizer > optimizer-verification-report.txt 2>&1 & echo VERIFY_EXIT=!ERRORLEVEL!> optimizer-verification-exit.txt"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "build-to-exitfile-von",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/v:on",
+				"/c",
+				"npm run build > build-output.txt 2>&1 & echo BUILD_EXIT=!ERRORLEVEL!> build-exit.txt"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "report-file-timestamp-once",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"for %I in (optimizer-verification-report.txt) do @echo REPORT_TIMESTAMP=%~tI"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "git-log-layout-engine",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git log --oneline -- src\\optimizer\\layoutEngine.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "git-log-verify-optimizer",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git log --oneline -- scripts\\verify-optimizer.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "restore-layout-engine-head",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git show HEAD:src/optimizer/layoutEngine.ts > src\\optimizer\\layoutEngine.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "find-layout-engine-copies",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"where /r c:\\Users\\erram layoutEngine.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "search-backups-fence-snap-symbol",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"findstr /s /m /c:\"FENCE_SNAP_DIAGNOSTICS_ENABLED\" c:\\Users\\erram\\AppData\\Roaming\\Code\\*.*"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "list-history-layoutengine-versions",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"dir /od /tw c:\\Users\\erram\\AppData\\Roaming\\Code\\User\\History\\33cc5f00\\*.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "probe-history-file-symbols",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"findstr /n /c:\"getOptimizerDebugOverlay\" /c:\"generateLayoutWithoutExtraSamples\" /c:\"applyCoordinateSnapping\" /c:\"snapToNearest5Mm\" c:\\Users\\erram\\AppData\\Roaming\\Code\\User\\History\\33cc5f00\\0B3M.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "restore-layout-engine-from-history-0B3M",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"copy /y c:\\Users\\erram\\AppData\\Roaming\\Code\\User\\History\\33cc5f00\\0B3M.ts src\\optimizer\\layoutEngine.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "backup-layout-engine-before-snap-rollback",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"copy /y src\\optimizer\\layoutEngine.ts src\\optimizer\\layoutEngine.pre-snap-rollback.bak.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "restore-layout-engine-clean-from-history",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"copy /y c:\\Users\\erram\\AppData\\Roaming\\Code\\User\\History\\33cc5f00\\0B3M.ts src\\optimizer\\layoutEngine.ts"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "fixture-around-required-sample",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer -- --fixture around-required-sample"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "fixture-mixed-large-small",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer -- --fixture mixed-large-small"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "fixture-depth-aware-right-fence",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer -- --fixture depth-aware-right-fence"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "fixture-spacing-boundary-close",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer -- --fixture spacing-boundary-close"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "full-verify-after-snap-rollback",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run verify:optimizer"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "build-after-snap-rollback",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run build"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "full-verify-capture-after-rollback",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/v:on",
+				"/c",
+				"npm run verify:optimizer > verify-full-after-rollback.txt 2>&1 & echo VERIFY_EXIT=!ERRORLEVEL! > verify-full-after-rollback.exit.txt"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "check-running-verify-processes",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"wmic process where \"name='node.exe'\" get ProcessId,CommandLine /format:list"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "check-node-processes-pwsh",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' } | Select-Object ProcessId, CommandLine | Format-List"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "check-node-tasklist",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"tasklist | findstr /i node.exe"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "git-status-short-after-rollback",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git status --short"
+			],
+			"problemMatcher": []
+		}
+	]
+}

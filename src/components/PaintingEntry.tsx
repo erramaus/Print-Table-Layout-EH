@@ -4,12 +4,14 @@ interface PaintingEntryProps {
   name: string;
   width: string;
   height: string;
-  orientation: 'VERTICAL' | 'HORIZONTAL' | null;
+  orientation: 'VERT' | 'HORI' | null;
+  isEditing: boolean;
   onNameChange: (value: string) => void;
   onWidthChange: (value: string) => void;
   onHeightChange: (value: string) => void;
-  onOrientationChange: (value: 'VERTICAL' | 'HORIZONTAL') => void;
+  onOrientationChange: (value: 'VERT' | 'HORI') => void;
   onAdd: () => void;
+  onCancelEdit: () => void;
   nameInputRef: RefObject<HTMLInputElement>;
 }
 
@@ -18,11 +20,13 @@ function PaintingEntry({
   width,
   height,
   orientation,
+  isEditing,
   onNameChange,
   onWidthChange,
   onHeightChange,
   onOrientationChange,
   onAdd,
+  onCancelEdit,
   nameInputRef,
 }: PaintingEntryProps) {
   return (
@@ -62,28 +66,34 @@ function PaintingEntry({
       <div className="orientation-toggle">
         <button
           type="button"
-          className={`toggle-button ${orientation === 'VERTICAL' ? 'active' : ''}`}
-          onClick={() => onOrientationChange('VERTICAL')}
-          aria-pressed={orientation === 'VERTICAL'}
+          className={`toggle-button ${orientation === 'VERT' ? 'active' : ''}`}
+          onClick={() => onOrientationChange('VERT')}
+          aria-pressed={orientation === 'VERT'}
         >
           VERT
         </button>
         <button
           type="button"
-          className={`toggle-button ${orientation === 'HORIZONTAL' ? 'active' : ''}`}
-          onClick={() => onOrientationChange('HORIZONTAL')}
-          aria-pressed={orientation === 'HORIZONTAL'}
+          className={`toggle-button ${orientation === 'HORI' ? 'active' : ''}`}
+          onClick={() => onOrientationChange('HORI')}
+          aria-pressed={orientation === 'HORI'}
         >
           HORI
         </button>
       </div>
       <button
         className="primary-button full-width-button"
+        type="button"
         onClick={onAdd}
         disabled={!width || !height || orientation === null}
       >
-        Add Painting
+        {isEditing ? 'Save Changes' : 'Add Painting'}
       </button>
+      {isEditing ? (
+        <button className="clear-button full-width-button" type="button" onClick={onCancelEdit}>
+          Cancel Edit
+        </button>
+      ) : null}
     </div>
   );
 }

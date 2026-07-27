@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:all": "cmd /c npm run verify:optimizer && npm run verify:pdf:single-page",
+    "verify:pdf:single-page": "node ./node_modules/tsx/dist/cli.mjs scripts/verify-pdf-single-page.ts",
+    "verify:optimizer": "set OPTIMIZER_DETERMINISTIC=1&& node --expose-gc --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/verify-optimizer.ts",
+    "readiness:optimizer": "node ./node_modules/tsx/dist/cli.mjs scripts/optimizer-readiness.ts"
   },
   "dependencies": {
     "pdf-lib": "^1.17.1",
@@ -17,6 +21,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "tsx": "^4.20.3",
     "typescript": "^5.5.4",
     "vite": "^5.4.1"
   }

@@ -7,16 +7,21 @@ interface ControlPanelProps {
   name: string;
   width: string;
   height: string;
-  orientation: 'VERTICAL' | 'HORIZONTAL' | null;
+  orientation: 'VERT' | 'HORI' | null;
+  isEditing: boolean;
   order: Painting[];
   onNameChange: (value: string) => void;
   onWidthChange: (value: string) => void;
   onHeightChange: (value: string) => void;
-  onOrientationChange: (value: 'VERTICAL' | 'HORIZONTAL') => void;
+  onOrientationChange: (value: 'VERT' | 'HORI') => void;
   onAddPainting: () => void;
+  onCancelEdit: () => void;
   onPrintLayout: () => Promise<void>;
+  isGeneratingPdf: boolean;
+  pdfErrorMessage: string | null;
   onClearOrder: () => void;
   onDeletePainting: (id: string) => void;
+  onEditPainting: (id: string) => void;
   nameInputRef: RefObject<HTMLInputElement>;
 }
 
@@ -25,15 +30,20 @@ function ControlPanel({
   width,
   height,
   orientation,
+  isEditing,
   order,
   onNameChange,
   onWidthChange,
   onHeightChange,
   onOrientationChange,
   onAddPainting,
+  onCancelEdit,
   onPrintLayout,
+  isGeneratingPdf,
+  pdfErrorMessage,
   onClearOrder,
   onDeletePainting,
+  onEditPainting,
   nameInputRef,
 }: ControlPanelProps) {
   return (
@@ -48,16 +58,24 @@ function ControlPanel({
         onHeightChange={onHeightChange}
         onOrientationChange={onOrientationChange}
         onAdd={onAddPainting}
+        onCancelEdit={onCancelEdit}
+        isEditing={isEditing}
         nameInputRef={nameInputRef}
       />
 
-      <button className="generate-button full-width-button" onClick={onPrintLayout}>
-        Print Layout PDF
+      <button
+        className="generate-button full-width-button"
+        type="button"
+        onClick={onPrintLayout}
+        disabled={isGeneratingPdf}
+      >
+        {isGeneratingPdf ? 'Generating layout...' : 'Print Layout PDF'}
       </button>
+      {pdfErrorMessage ? <p className="pdf-error-message">{pdfErrorMessage}</p> : null}
 
-      <CurrentOrder order={order} onDelete={onDeletePainting} />
+      <CurrentOrder order={order} onDelete={onDeletePainting} onEditPainting={onEditPainting} />
 
-      <button className="clear-button full-width-button" onClick={onClearOrder}>
+      <button className="clear-button full-width-button" type="button" onClick={onClearOrder}>
         Clear Order
       </button>
     </section>

@@ -1,0 +1,762 @@
+{
+  "result": "PASS",
+  "runMode": "full-suite",
+  "passed": 132,
+  "failed": 0,
+  "skipped": 0,
+  "durationMs": 199077,
+  "fixtureFilter": null,
+  "fixturesRun": 12,
+  "fixturesSkipped": 0,
+  "fixtures": [
+    {
+      "name": "one-painting",
+      "result": "PASS",
+      "durationMs": 53,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "identical-size",
+      "result": "PASS",
+      "durationMs": 11627,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "mixed-large-small",
+      "result": "PASS",
+      "durationMs": 6493,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "around-required-sample",
+      "result": "PASS",
+      "durationMs": 9754,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "known-one-table",
+      "result": "PASS",
+      "durationMs": 7485,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "known-multi-table",
+      "result": "PASS",
+      "durationMs": 2078,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "depth-aware-right-fence",
+      "result": "PASS",
+      "durationMs": 2930,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "extra-sample-possible",
+      "result": "PASS",
+      "durationMs": 263,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "extra-sample-none-expected",
+      "result": "PASS",
+      "durationMs": 183,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "floating-regression-case",
+      "result": "PASS",
+      "durationMs": 6920,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "unnecessary-second-table-regression",
+      "result": "PASS",
+      "durationMs": 5574,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    },
+    {
+      "name": "spacing-boundary-close",
+      "result": "PASS",
+      "durationMs": 26467,
+      "checks": [
+        {
+          "name": "spacing",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "bounds",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "orientation",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "table-count",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 1
+        },
+        {
+          "name": "gap-analysis",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "extra-samples",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "pdf-coordinate-parity",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "sample-semantics",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        },
+        {
+          "name": "depth-aware-right-fence",
+          "passed": true,
+          "failureCount": 0,
+          "durationMs": 0
+        }
+      ],
+      "failureCount": 0
+    }
+  ],
+  "failures": [],
+  "exitStatus": 0,
+  "generatedAt": "2026-07-27T08:35:34.609Z",
+  "reportPath": "optimizer-verification-report.txt",
+  "jsonPath": "optimizer-verification-report.json"
+}

@@ -1,0 +1,17 @@
+
+> print-table-optimizer@0.0.0 verify:optimizer
+> set OPTIMIZER_DETERMINISTIC=1&& node --expose-gc --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/verify-optimizer.ts
+
+PASS one-painting
+PASS identical-size
+PASS mixed-large-small
+PASS around-required-sample
+PASS known-one-table
+PASS known-multi-table
+PASS depth-aware-right-fence
+PASS extra-sample-possible
+PASS extra-sample-none-expected
+PASS floating-regression-case
+PASS unnecessary-second-table-regression
+PASS spacing-boundary-close
+Optimizer verification: PASS

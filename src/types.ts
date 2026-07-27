@@ -4,6 +4,6 @@ export interface Painting {
   name?: string;
   width: number;
   height: number;
-  orientation: 'VERTICAL' | 'HORIZONTAL';
+  orientation: 'VERT' | 'HORI';
   color: string;
 }

@@ -4,7 +4,7 @@ export interface Painting {
   name?: string;
   width: number;
   height: number;
-  orientation: 'VERTICAL' | 'HORIZONTAL';
+  orientation: 'VERT' | 'HORI';
   color: string;
 }
 
@@ -12,6 +12,7 @@ export interface PlacedPainting {
   id: string;
   referenceNumber: string;
   name?: string;
+  sampleType?: 'required' | 'extra';
   width: number;
   height: number;
   orientation: 'VERTICAL' | 'HORIZONTAL';

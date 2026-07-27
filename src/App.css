@@ -176,6 +176,17 @@ input:focus {
   background: #b91c1c;
 }
 
+.generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pdf-error-message {
+  margin: 8px 0 0;
+  color: #991b1b;
+  font-size: 13px;
+}
+
 .clear-button {
   background: white;
   color: #dc2626;

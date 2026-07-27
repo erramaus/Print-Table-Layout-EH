@@ -1,0 +1,739 @@
+{
+  "generatedAt": "2026-07-27T04:18:43.925Z",
+  "fixtures": [
+    {
+      "fixture": "one-painting",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 30,
+          "height": 20,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 762,
+          "heightMm": 508,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 11,
+      "normalizedLayoutHash": "0d2a6d59d44c2f216c66665728ed9c3fffa6d38f5a0bb02c9613490b9b15b87a",
+      "debugSvg": "one-painting.svg"
+    },
+    {
+      "fixture": "two-identical-paintings",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 24,
+          "height": 18,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 24,
+          "height": 18,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 815,
+          "yMm": 0,
+          "widthMm": 609.6,
+          "heightMm": 457.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 609.6,
+          "heightMm": 457.2,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 8,
+      "normalizedLayoutHash": "65a79aafa09544600f402221a7e14e16e730299cea670f849cd68294b83186b2",
+      "debugSvg": "two-identical-paintings.svg"
+    },
+    {
+      "fixture": "mixed-large-small",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 48,
+          "height": 36,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 40,
+          "height": 28,
+          "orientation": "HORI",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 16,
+          "height": 12,
+          "orientation": "HORI",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 1755,
+          "yMm": 0,
+          "widthMm": 711.2,
+          "heightMm": 1016,
+          "orientation": "HORIZONTAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 510,
+          "yMm": 0,
+          "widthMm": 1219.2,
+          "heightMm": 914.4,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 177.8,
+          "yMm": 0,
+          "widthMm": 304.8,
+          "heightMm": 406.4,
+          "orientation": "HORIZONTAL"
+        }
+      ],
+      "extraSampleCount": 4,
+      "normalizedLayoutHash": "c715b06ecac47b6e8dfadc2fcfc81aa888fb2744d87656983b2343a7a2a69dc7",
+      "debugSvg": "mixed-large-small.svg"
+    },
+    {
+      "fixture": "front-fence-fill",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 42,
+          "height": 12,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 38,
+          "height": 12,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 34,
+          "height": 12,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 995,
+          "yMm": 0,
+          "widthMm": 1066.8,
+          "heightMm": 304.8,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 230,
+          "widthMm": 965.2,
+          "heightMm": 304.8,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 995,
+          "yMm": 335,
+          "widthMm": 863.6,
+          "heightMm": 304.8,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 9,
+      "normalizedLayoutHash": "86d94bf30359aa1a814cdc6567204692a730d15de4ff5d886fd7ba42ccc19ff1",
+      "debugSvg": "front-fence-fill.svg"
+    },
+    {
+      "fixture": "right-fence-fill",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 12,
+          "height": 44,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 12,
+          "height": 40,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 12,
+          "height": 36,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 840,
+          "yMm": 0,
+          "widthMm": 304.8,
+          "heightMm": 1117.6,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 508,
+          "yMm": 0,
+          "widthMm": 304.8,
+          "heightMm": 1016,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 177.8,
+          "yMm": 0,
+          "widthMm": 304.8,
+          "heightMm": 914.4,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 10,
+      "normalizedLayoutHash": "fee66f9ec196d5eb1a85d9d364f65f2ed113c7c35cd0285a53111e4b30604e90",
+      "debugSvg": "right-fence-fill.svg"
+    },
+    {
+      "fixture": "extra-sample-positions-available",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 30,
+          "height": 20,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 22,
+          "height": 14,
+          "orientation": "HORI",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 970,
+          "yMm": 0,
+          "widthMm": 355.6,
+          "heightMm": 558.8,
+          "orientation": "HORIZONTAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 762,
+          "heightMm": 508,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 9,
+      "normalizedLayoutHash": "6fe37bc19d17f47eecf2cf62312a46d459af28f792886df7bf3fbce063927252",
+      "debugSvg": "extra-sample-positions-available.svg"
+    },
+    {
+      "fixture": "no-extra-sample-positions-available",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 62,
+          "height": 50,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 58,
+          "height": 44,
+          "orientation": "HORI",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 48,
+          "height": 40,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 2,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 1245,
+          "yMm": 0,
+          "widthMm": 1117.6,
+          "heightMm": 1473.2,
+          "orientation": "HORIZONTAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 230,
+          "widthMm": 1219.2,
+          "heightMm": 1016,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "sample-2",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 2,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 2,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 1574.8,
+          "heightMm": 1270,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 14,
+      "normalizedLayoutHash": "1ce28d521f14f4727c3711cd18617d4fc1fb3aeff38d83926cd2896ec0d38332",
+      "debugSvg": "no-extra-sample-positions-available.svg"
+    },
+    {
+      "fixture": "known-one-table-job",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 36,
+          "height": 24,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 30,
+          "height": 24,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 20,
+          "height": 14,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 1500,
+          "yMm": 0,
+          "widthMm": 914.4,
+          "heightMm": 609.6,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 711.2,
+          "yMm": 0,
+          "widthMm": 762,
+          "heightMm": 609.6,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 177.8,
+          "yMm": 0,
+          "widthMm": 508,
+          "heightMm": 355.6,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 4,
+      "normalizedLayoutHash": "3b2035098a8673667c269bf9f206d536d94b3091e46a7ca2560e25bffbc50093",
+      "debugSvg": "known-one-table-job.svg"
+    },
+    {
+      "fixture": "true-multi-table-job",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 58,
+          "height": 46,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 56,
+          "height": 44,
+          "orientation": "HORI",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 54,
+          "height": 42,
+          "orientation": "VERT",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 3,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 1473.2,
+          "heightMm": 1168.4,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "sample-2",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 2,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 2,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 1371.6,
+          "heightMm": 1066.8,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "sample-3",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 3,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 3,
+          "xMm": 180,
+          "yMm": 0,
+          "widthMm": 1117.6,
+          "heightMm": 1422.4,
+          "orientation": "HORIZONTAL"
+        }
+      ],
+      "extraSampleCount": 24,
+      "normalizedLayoutHash": "36398f4d0253a041099972ae4c71e1e2f9134fd60607c7678d72da9bf74483ba",
+      "debugSvg": "true-multi-table-job.svg"
+    },
+    {
+      "fixture": "floating-painting-regression",
+      "inputPaintings": [
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "name": "P1",
+          "width": 38,
+          "height": 26,
+          "orientation": "VERT",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "name": "P2",
+          "width": 32,
+          "height": 24,
+          "orientation": "HORI",
+          "color": "#336699"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "name": "P3",
+          "width": 16,
+          "height": 12,
+          "orientation": "HORI",
+          "color": "#336699"
+        }
+      ],
+      "tablesUsed": 1,
+      "paintingCoordinates": [
+        {
+          "id": "sample-1",
+          "referenceNumber": "SAMPLE",
+          "tableNumber": 1,
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 152.4,
+          "heightMm": 203.2,
+          "orientation": "VERTICAL"
+        },
+        {
+          "id": "fixture-2",
+          "referenceNumber": "#02",
+          "tableNumber": 1,
+          "xMm": 177.8,
+          "yMm": 0,
+          "widthMm": 609.6,
+          "heightMm": 812.8,
+          "orientation": "HORIZONTAL"
+        },
+        {
+          "id": "fixture-3",
+          "referenceNumber": "#03",
+          "tableNumber": 1,
+          "xMm": 812.8,
+          "yMm": 0,
+          "widthMm": 304.8,
+          "heightMm": 406.4,
+          "orientation": "HORIZONTAL"
+        },
+        {
+          "id": "fixture-1",
+          "referenceNumber": "#01",
+          "tableNumber": 1,
+          "xMm": 1145,
+          "yMm": 0,
+          "widthMm": 965.2,
+          "heightMm": 660.4,
+          "orientation": "VERTICAL"
+        }
+      ],
+      "extraSampleCount": 5,
+      "normalizedLayoutHash": "db23825f068f524b57dfa86b3f0fac4763e012486277f628cb2517b95ebf4949",
+      "debugSvg": "floating-painting-regression.svg"
+    }
+  ]
+}

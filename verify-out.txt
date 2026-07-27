@@ -1,0 +1,3 @@
+PASS one-painting
+FAIL identical-size
+Failure fixture=identical-size rule=snap-x-grid expected=see rule details in report actual=#02 table 1 x=812.800mm is not on 5mm grid though a valid snap exists report=optimizer-verification-report.txt
