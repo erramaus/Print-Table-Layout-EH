@@ -1,13 +1,16 @@
+import type { RefObject } from 'react';
+
 interface PaintingEntryProps {
   name: string;
   width: string;
   height: string;
-  orientation: 'VERTICAL' | 'HORIZONTAL';
+  orientation: 'VERTICAL' | 'HORIZONTAL' | null;
   onNameChange: (value: string) => void;
   onWidthChange: (value: string) => void;
   onHeightChange: (value: string) => void;
   onOrientationChange: (value: 'VERTICAL' | 'HORIZONTAL') => void;
   onAdd: () => void;
+  nameInputRef: RefObject<HTMLInputElement>;
 }
 
 function PaintingEntry({
@@ -20,17 +23,17 @@ function PaintingEntry({
   onHeightChange,
   onOrientationChange,
   onAdd,
+  nameInputRef,
 }: PaintingEntryProps) {
   return (
     <div className="panel-section panel-section-tight">
-      <h2>Add Painting</h2>
       <div className="field-row">
         <div>
-          <label htmlFor="name">Name</label>
           <input
             id="name"
+            ref={nameInputRef}
             type="text"
-            placeholder="Blue Heron"
+            placeholder="Name"
             value={name}
             onChange={(event) => onNameChange(event.target.value)}
           />
@@ -38,7 +41,6 @@ function PaintingEntry({
       </div>
       <div className="field-row field-row-two">
         <div>
-          <label htmlFor="width">W (in)</label>
           <input
             id="width"
             type="number"
@@ -48,7 +50,6 @@ function PaintingEntry({
           />
         </div>
         <div>
-          <label htmlFor="height">H (in)</label>
           <input
             id="height"
             type="number"
@@ -63,6 +64,7 @@ function PaintingEntry({
           type="button"
           className={`toggle-button ${orientation === 'VERTICAL' ? 'active' : ''}`}
           onClick={() => onOrientationChange('VERTICAL')}
+          aria-pressed={orientation === 'VERTICAL'}
         >
           VERT
         </button>
@@ -70,11 +72,16 @@ function PaintingEntry({
           type="button"
           className={`toggle-button ${orientation === 'HORIZONTAL' ? 'active' : ''}`}
           onClick={() => onOrientationChange('HORIZONTAL')}
+          aria-pressed={orientation === 'HORIZONTAL'}
         >
           HORI
         </button>
       </div>
-      <button className="primary-button full-width-button" onClick={onAdd}>
+      <button
+        className="primary-button full-width-button"
+        onClick={onAdd}
+        disabled={!width || !height || orientation === null}
+      >
         Add Painting
       </button>
     </div>

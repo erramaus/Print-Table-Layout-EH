@@ -35,12 +35,6 @@ function PrintTable({ width = 98, height = 80, placements, selectedPlacementId, 
     <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} role="img" aria-label="Print table layout" className="print-table-svg">
       <rect x={offsetX} y={offsetY} width={tableWidth} height={tableHeight} fill="#faf5ff" stroke="#6b21a8" strokeWidth="3" />
 
-      <text x={offsetX + tableWidth / 2} y={offsetY + tableHeight + 42} textAnchor="middle" fontSize="20" fill="#0f172a" fontWeight="700">
-        Front
-      </text>
-      <text x={offsetX + tableWidth / 2} y={offsetY - 16} textAnchor="middle" fontSize="20" fill="#0f172a" fontWeight="700">
-        Back
-      </text>
 
       {[...Array(xScaleMarks + 1)].map((_, idx) => {
         const mmValue = idx * 50;
@@ -60,10 +54,11 @@ function PrintTable({ width = 98, height = 80, placements, selectedPlacementId, 
             {isLabel && (
               <text
                 x={xPosition}
-                y={offsetY + tableHeight + scaleTickLength + 16}
+                y={offsetY + tableHeight + scaleTickLength + 20}
                 textAnchor="middle"
-                fontSize="12"
+                fontSize="11"
                 fill={scaleColor}
+                transform={`rotate(-90 ${xPosition} ${offsetY + tableHeight + scaleTickLength + 20})`}
               >
                 {mmValue}
               </text>
@@ -124,10 +119,30 @@ function PrintTable({ width = 98, height = 80, placements, selectedPlacementId, 
               rx="0"
               ry="0"
             />
-            <text x={rectX + rectWidth / 2} y={rectY + rectHeight / 2 - 6} textAnchor="middle" fontSize="18" fill="#ffffff" fontWeight="700">
-              {placement.referenceNumber}
-            </text>
-            {showFullLabel && (
+            {placement.referenceNumber === 'SAMPLE' ? (
+              <g
+                transform={`translate(${rectX + rectWidth / 2} ${rectY + rectHeight / 2}) rotate(90)`}
+                aria-label="Sample piece label"
+              >
+                <text
+                  x="0"
+                  y="0"
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize={Math.min(rectWidth / 4.2, rectHeight / 3, 12)}
+                  fill="#111827"
+                  fontWeight="700"
+                >
+                  <tspan x="0" dy="-0.35em">SAMPLE</tspan>
+                  <tspan x="0" dy="1.35em">6 × 8</tspan>
+                </text>
+              </g>
+            ) : (
+              <text x={rectX + rectWidth / 2} y={rectY + rectHeight / 2 - 6} textAnchor="middle" fontSize="18" fill="#ffffff" fontWeight="700">
+                {placement.referenceNumber}
+              </text>
+            )}
+            {showFullLabel && placement.referenceNumber !== 'SAMPLE' && (
               <>
                 {placement.name ? (
                   <text x={rectX + rectWidth / 2} y={rectY + rectHeight / 2 + 14} textAnchor="middle" fontSize="12" fill="#ffffff">
@@ -139,7 +154,7 @@ function PrintTable({ width = 98, height = 80, placements, selectedPlacementId, 
                 </text>
               </>
             )}
-            {showNameAndRef && !showFullLabel ? (
+            {showNameAndRef && !showFullLabel && placement.referenceNumber !== 'SAMPLE' ? (
               <>
                 {placement.name ? (
                   <text x={rectX + rectWidth / 2} y={rectY + rectHeight / 2 - 2} textAnchor="middle" fontSize="12" fill="#ffffff">
@@ -151,7 +166,7 @@ function PrintTable({ width = 98, height = 80, placements, selectedPlacementId, 
                 </text>
               </>
             ) : null}
-            {!showFullLabel && !showNameAndRef ? (
+            {!showFullLabel && !showNameAndRef && placement.referenceNumber !== 'SAMPLE' ? (
               <text x={rectX + rectWidth / 2} y={rectY + rectHeight / 2 + 4} textAnchor="middle" fontSize="12" fill="#ffffff">
                 {placement.referenceNumber}
               </text>

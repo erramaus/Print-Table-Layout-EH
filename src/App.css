@@ -150,6 +150,7 @@ input:focus {
 }
 
 .primary-button,
+.generate-button,
 .optimize-button,
 .clear-button,
 .delete-button,
@@ -166,6 +167,15 @@ input:focus {
   color: white;
 }
 
+.generate-button {
+  background: #dc2626;
+  color: white;
+}
+
+.generate-button:hover {
+  background: #b91c1c;
+}
+
 .clear-button {
   background: white;
   color: #dc2626;
@@ -173,17 +183,17 @@ input:focus {
 }
 
 .toggle-button {
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  border: 1px solid #9ca3af;
   background: white;
-  color: #1f2937;
+  color: #374151;
   flex: 1;
   min-width: 0;
 }
 
 .toggle-button.active {
-  background: #2563eb;
+  background: #6b7280;
   color: white;
-  border-color: #2563eb;
+  border-color: #4b5563;
 }
 
 .orientation-toggle {

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import './App.css';
 import ControlPanel from './components/ControlPanel';
 import CoordinatesPanel from './components/CoordinatesPanel';
@@ -6,17 +6,18 @@ import MessagesPanel from './components/MessagesPanel';
 import PrintTableView from './components/PrintTableView';
 import StatisticsPanel from './components/StatisticsPanel';
 import { generateLayout as generateLayoutFromOrder } from './optimizer/layoutEngine';
+import { createLayoutPdf } from './utils/pdfExport';
 import type { Painting } from './types';
 
 function App() {
   const [name, setName] = useState('');
   const [width, setWidth] = useState('');
   const [height, setHeight] = useState('');
-  const [orientation, setOrientation] = useState<'VERTICAL' | 'HORIZONTAL'>('VERTICAL');
+  const [orientation, setOrientation] = useState<'VERTICAL' | 'HORIZONTAL' | null>(null);
   const [order, setOrder] = useState<Painting[]>([]);
-  const [layoutVersion, setLayoutVersion] = useState(0);
   const [selectedPlacementId, setSelectedPlacementId] = useState<string | null>(null);
   const [selectedTableNumber, setSelectedTableNumber] = useState(1);
+  const nameInputRef = useRef<HTMLInputElement | null>(null);
   const [messages, setMessages] = useState<string[]>([
     'Mandatory test print reserved at (0, 0).',
     'Version 1 interface ready for manual layout review.',
@@ -25,6 +26,14 @@ function App() {
   const addPainting = () => {
     const parsedWidth = Number(width);
     const parsedHeight = Number(height);
+
+    if (orientation === null) {
+      setMessages((prev) => [
+        ...prev,
+        'Please select an orientation.',
+      ]);
+      return;
+    }
 
     if (!Number.isFinite(parsedWidth) || parsedWidth <= 0 || !Number.isFinite(parsedHeight) || parsedHeight <= 0) {
       setMessages((prev) => [
@@ -54,22 +63,31 @@ function App() {
     setName('');
     setWidth('');
     setHeight('');
-    setOrientation('VERTICAL');
+    setOrientation(null);
+    nameInputRef.current?.focus();
     setMessages((prev) => [
       ...prev,
       `Added ${nextReferenceNumber} at ${parsedWidth}" × ${parsedHeight}".`,
     ]);
   };
 
-  const generateLayout = () => {
-    const layoutResult = generateLayoutFromOrder(order);
-    setSelectedTableNumber(1);
-    setSelectedPlacementId(null);
-    setLayoutVersion((prev) => prev + 1);
-    setMessages((prev) => [
-      ...prev,
-      ...layoutResult.messages,
-    ]);
+  const printLayout = async () => {
+    const generatedDate = new Date().toLocaleString();
+    const pdfBytes = await createLayoutPdf({
+      layout,
+      totalPaintings: order.length,
+      totalArea,
+      wasteArea,
+      wastePercentage,
+      generatedDate,
+    });
+    const blob = new Blob([pdfBytes.buffer as ArrayBuffer], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `print-layout-${generatedDate.replace(/[:\/ ,]+/g, '_')}.pdf`;
+    link.click();
+    URL.revokeObjectURL(url);
   };
 
   const deletePainting = (id: string) => {
@@ -88,7 +106,7 @@ function App() {
     ]);
   };
 
-  const layout = useMemo(() => generateLayoutFromOrder(order), [order, layoutVersion]);
+  const layout = useMemo(() => generateLayoutFromOrder(order), [order]);
 
   const activeTable = useMemo(() => {
     return layout.tables.find((table) => table.tableNumber === selectedTableNumber) ?? layout.tables[0];
@@ -138,7 +156,8 @@ function App() {
           onHeightChange={setHeight}
           onOrientationChange={setOrientation}
           onAddPainting={addPainting}
-          onOptimize={generateLayout}
+          nameInputRef={nameInputRef}
+          onPrintLayout={printLayout}
           onClearOrder={clearOrder}
           onDeletePainting={deletePainting}
         />
