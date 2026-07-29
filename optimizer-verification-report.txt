@@ -1,26 +1,26 @@
 Optimizer verification report
-Timestamp: 2026-07-27T20:46:04.126Z
+Timestamp: 2026-07-29T02:41:43.166Z
 RunMode: full-suite
-Mode: normal
+Mode: quiet
 Fixture filter: all
 
 Fixture execution
 Fixture: one-painting
 Result: PASS
-RuntimeMs: 57
+RuntimeMs: 25
 Check spacing: PASS (failures=0, runtimeMs=0)
 Check bounds: PASS (failures=0, runtimeMs=0)
 Check orientation: PASS (failures=0, runtimeMs=0)
 Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=1)
-Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=0)
+Check extra-samples: PASS (failures=0, runtimeMs=1)
 Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
 Check sample-semantics: PASS (failures=0, runtimeMs=0)
 Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
 Fixture: identical-size
 Result: PASS
-RuntimeMs: 10087
+RuntimeMs: 10110
 Check spacing: PASS (failures=0, runtimeMs=0)
 Check bounds: PASS (failures=0, runtimeMs=0)
 Check orientation: PASS (failures=0, runtimeMs=1)
@@ -33,22 +33,22 @@ Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
 Fixture: mixed-large-small
 Result: PASS
-RuntimeMs: 5741
+RuntimeMs: 5768
 Check spacing: PASS (failures=0, runtimeMs=0)
-Check bounds: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=1)
 Check orientation: PASS (failures=0, runtimeMs=0)
 Check table-count: PASS (failures=0, runtimeMs=0)
 Check gap-analysis: PASS (failures=0, runtimeMs=0)
 Check extra-samples: PASS (failures=0, runtimeMs=0)
 Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=1)
+Check sample-semantics: PASS (failures=0, runtimeMs=0)
 Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
 Fixture: around-required-sample
 Result: PASS
-RuntimeMs: 9237
-Check spacing: PASS (failures=0, runtimeMs=1)
-Check bounds: PASS (failures=0, runtimeMs=0)
+RuntimeMs: 9698
+Check spacing: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=1)
 Check orientation: PASS (failures=0, runtimeMs=0)
 Check table-count: PASS (failures=0, runtimeMs=0)
 Check gap-analysis: PASS (failures=0, runtimeMs=0)
@@ -59,72 +59,7 @@ Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
 Fixture: known-one-table
 Result: PASS
-RuntimeMs: 7285
-Check spacing: PASS (failures=0, runtimeMs=1)
-Check bounds: PASS (failures=0, runtimeMs=0)
-Check orientation: PASS (failures=0, runtimeMs=0)
-Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=0)
-Check extra-samples: PASS (failures=0, runtimeMs=0)
-Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=1)
-Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
-
-Fixture: known-multi-table
-Result: PASS
-RuntimeMs: 2027
-Check spacing: PASS (failures=0, runtimeMs=0)
-Check bounds: PASS (failures=0, runtimeMs=0)
-Check orientation: PASS (failures=0, runtimeMs=0)
-Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=0)
-Check extra-samples: PASS (failures=0, runtimeMs=1)
-Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=0)
-Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
-
-Fixture: depth-aware-right-fence
-Result: PASS
-RuntimeMs: 2761
-Check spacing: PASS (failures=0, runtimeMs=0)
-Check bounds: PASS (failures=0, runtimeMs=1)
-Check orientation: PASS (failures=0, runtimeMs=0)
-Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=0)
-Check extra-samples: PASS (failures=0, runtimeMs=0)
-Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=0)
-Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
-
-Fixture: extra-sample-possible
-Result: PASS
-RuntimeMs: 310
-Check spacing: PASS (failures=0, runtimeMs=1)
-Check bounds: PASS (failures=0, runtimeMs=0)
-Check orientation: PASS (failures=0, runtimeMs=0)
-Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=0)
-Check extra-samples: PASS (failures=0, runtimeMs=0)
-Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=1)
-Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
-
-Fixture: extra-sample-none-expected
-Result: PASS
-RuntimeMs: 164
-Check spacing: PASS (failures=0, runtimeMs=0)
-Check bounds: PASS (failures=0, runtimeMs=1)
-Check orientation: PASS (failures=0, runtimeMs=0)
-Check table-count: PASS (failures=0, runtimeMs=0)
-Check gap-analysis: PASS (failures=0, runtimeMs=0)
-Check extra-samples: PASS (failures=0, runtimeMs=0)
-Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
-Check sample-semantics: PASS (failures=0, runtimeMs=1)
-Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
-
-Fixture: floating-regression-case
-Result: PASS
-RuntimeMs: 6610
+RuntimeMs: 7526
 Check spacing: PASS (failures=0, runtimeMs=0)
 Check bounds: PASS (failures=0, runtimeMs=0)
 Check orientation: PASS (failures=0, runtimeMs=0)
@@ -135,9 +70,35 @@ Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
 Check sample-semantics: PASS (failures=0, runtimeMs=0)
 Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
-Fixture: unnecessary-second-table-regression
+Fixture: known-multi-table
 Result: PASS
-RuntimeMs: 5334
+RuntimeMs: 2033
+Check spacing: PASS (failures=0, runtimeMs=1)
+Check bounds: PASS (failures=0, runtimeMs=0)
+Check orientation: PASS (failures=0, runtimeMs=0)
+Check table-count: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=0)
+Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
+Check sample-semantics: PASS (failures=0, runtimeMs=0)
+Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
+
+Fixture: depth-aware-right-fence
+Result: PASS
+RuntimeMs: 2899
+Check spacing: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=0)
+Check orientation: PASS (failures=0, runtimeMs=1)
+Check table-count: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=0)
+Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
+Check sample-semantics: PASS (failures=0, runtimeMs=0)
+Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
+
+Fixture: extra-sample-possible
+Result: PASS
+RuntimeMs: 262
 Check spacing: PASS (failures=0, runtimeMs=0)
 Check bounds: PASS (failures=0, runtimeMs=0)
 Check orientation: PASS (failures=0, runtimeMs=0)
@@ -148,10 +109,23 @@ Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
 Check sample-semantics: PASS (failures=0, runtimeMs=0)
 Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
-Fixture: spacing-boundary-close
+Fixture: extra-sample-none-expected
 Result: PASS
-RuntimeMs: 24122
-Check spacing: PASS (failures=0, runtimeMs=1)
+RuntimeMs: 150
+Check spacing: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=0)
+Check orientation: PASS (failures=0, runtimeMs=0)
+Check table-count: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=1)
+Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
+Check sample-semantics: PASS (failures=0, runtimeMs=0)
+Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
+
+Fixture: floating-regression-case
+Result: PASS
+RuntimeMs: 7021
+Check spacing: PASS (failures=0, runtimeMs=0)
 Check bounds: PASS (failures=0, runtimeMs=0)
 Check orientation: PASS (failures=0, runtimeMs=0)
 Check table-count: PASS (failures=0, runtimeMs=0)
@@ -161,13 +135,39 @@ Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
 Check sample-semantics: PASS (failures=0, runtimeMs=0)
 Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
 
+Fixture: unnecessary-second-table-regression
+Result: PASS
+RuntimeMs: 6058
+Check spacing: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=0)
+Check orientation: PASS (failures=0, runtimeMs=1)
+Check table-count: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=0)
+Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=0)
+Check sample-semantics: PASS (failures=0, runtimeMs=1)
+Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
+
+Fixture: spacing-boundary-close
+Result: PASS
+RuntimeMs: 23062
+Check spacing: PASS (failures=0, runtimeMs=0)
+Check bounds: PASS (failures=0, runtimeMs=0)
+Check orientation: PASS (failures=0, runtimeMs=0)
+Check table-count: PASS (failures=0, runtimeMs=0)
+Check gap-analysis: PASS (failures=0, runtimeMs=0)
+Check extra-samples: PASS (failures=0, runtimeMs=0)
+Check pdf-coordinate-parity: PASS (failures=0, runtimeMs=1)
+Check sample-semantics: PASS (failures=0, runtimeMs=0)
+Check depth-aware-right-fence: PASS (failures=0, runtimeMs=0)
+
 Optimizer verification
 Passed: 132
 Failed: 0
 Skipped: 0
 FixturesRun: 12
 FixturesSkipped: 0
-DurationMs: 78428
+DurationMs: 79221
 Result: PASS
 ExitStatus: 0
 TextReport: optimizer-verification-report.txt

@@ -4,7 +4,7 @@
   "passed": 132,
   "failed": 0,
   "skipped": 0,
-  "durationMs": 78428,
+  "durationMs": 79221,
   "fixtureFilter": null,
   "fixturesRun": 12,
   "fixturesSkipped": 0,
@@ -12,7 +12,7 @@
     {
       "name": "one-painting",
       "result": "PASS",
-      "durationMs": 57,
+      "durationMs": 25,
       "checks": [
         {
           "name": "spacing",
@@ -42,13 +42,13 @@
           "name": "gap-analysis",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "pdf-coordinate-parity",
@@ -74,7 +74,7 @@
     {
       "name": "identical-size",
       "result": "PASS",
-      "durationMs": 10087,
+      "durationMs": 10110,
       "checks": [
         {
           "name": "spacing",
@@ -136,7 +136,7 @@
     {
       "name": "mixed-large-small",
       "result": "PASS",
-      "durationMs": 5741,
+      "durationMs": 5768,
       "checks": [
         {
           "name": "spacing",
@@ -148,7 +148,7 @@
           "name": "bounds",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "orientation",
@@ -184,7 +184,7 @@
           "name": "sample-semantics",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "depth-aware-right-fence",
@@ -198,19 +198,19 @@
     {
       "name": "around-required-sample",
       "result": "PASS",
-      "durationMs": 9237,
+      "durationMs": 9698,
       "checks": [
         {
           "name": "spacing",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "bounds",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "orientation",
@@ -260,13 +260,13 @@
     {
       "name": "known-one-table",
       "result": "PASS",
-      "durationMs": 7285,
+      "durationMs": 7526,
       "checks": [
         {
           "name": "spacing",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "bounds",
@@ -290,7 +290,7 @@
           "name": "gap-analysis",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "extra-samples",
@@ -308,7 +308,7 @@
           "name": "sample-semantics",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "depth-aware-right-fence",
@@ -322,13 +322,13 @@
     {
       "name": "known-multi-table",
       "result": "PASS",
-      "durationMs": 2027,
+      "durationMs": 2033,
       "checks": [
         {
           "name": "spacing",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "bounds",
@@ -358,7 +358,7 @@
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "pdf-coordinate-parity",
@@ -384,7 +384,7 @@
     {
       "name": "depth-aware-right-fence",
       "result": "PASS",
-      "durationMs": 2761,
+      "durationMs": 2899,
       "checks": [
         {
           "name": "spacing",
@@ -396,13 +396,13 @@
           "name": "bounds",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "orientation",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "table-count",
@@ -446,13 +446,13 @@
     {
       "name": "extra-sample-possible",
       "result": "PASS",
-      "durationMs": 310,
+      "durationMs": 262,
       "checks": [
         {
           "name": "spacing",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "bounds",
@@ -482,7 +482,7 @@
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "pdf-coordinate-parity",
@@ -494,7 +494,7 @@
           "name": "sample-semantics",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "depth-aware-right-fence",
@@ -508,7 +508,7 @@
     {
       "name": "extra-sample-none-expected",
       "result": "PASS",
-      "durationMs": 164,
+      "durationMs": 150,
       "checks": [
         {
           "name": "spacing",
@@ -520,7 +520,7 @@
           "name": "bounds",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "orientation",
@@ -538,7 +538,7 @@
           "name": "gap-analysis",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "extra-samples",
@@ -556,7 +556,7 @@
           "name": "sample-semantics",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "depth-aware-right-fence",
@@ -570,7 +570,7 @@
     {
       "name": "floating-regression-case",
       "result": "PASS",
-      "durationMs": 6610,
+      "durationMs": 7021,
       "checks": [
         {
           "name": "spacing",
@@ -600,13 +600,13 @@
           "name": "gap-analysis",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "pdf-coordinate-parity",
@@ -632,7 +632,7 @@
     {
       "name": "unnecessary-second-table-regression",
       "result": "PASS",
-      "durationMs": 5334,
+      "durationMs": 6058,
       "checks": [
         {
           "name": "spacing",
@@ -650,7 +650,7 @@
           "name": "orientation",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "table-count",
@@ -668,7 +668,7 @@
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "pdf-coordinate-parity",
@@ -680,7 +680,7 @@
           "name": "sample-semantics",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "depth-aware-right-fence",
@@ -694,13 +694,13 @@
     {
       "name": "spacing-boundary-close",
       "result": "PASS",
-      "durationMs": 24122,
+      "durationMs": 23062,
       "checks": [
         {
           "name": "spacing",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "bounds",
@@ -730,13 +730,13 @@
           "name": "extra-samples",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 1
+          "durationMs": 0
         },
         {
           "name": "pdf-coordinate-parity",
           "passed": true,
           "failureCount": 0,
-          "durationMs": 0
+          "durationMs": 1
         },
         {
           "name": "sample-semantics",
@@ -756,7 +756,7 @@
   ],
   "failures": [],
   "exitStatus": 0,
-  "generatedAt": "2026-07-27T20:46:04.127Z",
+  "generatedAt": "2026-07-29T02:41:43.166Z",
   "reportPath": "optimizer-verification-report.txt",
   "jsonPath": "optimizer-verification-report.json"
 }
